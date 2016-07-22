@@ -3,6 +3,9 @@ using System.Collections;
 
 public class FeetController : MonoBehaviour {
 
+    public delegate void SteppedTooFar();
+    public static event SteppedTooFar onOverStride;
+
     public GameObject upperBody;
     public GameObject leftFoot;
     public GameObject rightFoot;
@@ -21,9 +24,20 @@ public class FeetController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        // TODO: Options: only allow one foot moving at a time.
-        updateFoot(rightFoot, "Fire1");
-        updateFoot(leftFoot, "Fire2");
+        // TODO: Only allow one foot moving at a time.
+        if (rightFoot.transform.position.y > 0)
+        {
+            updateFoot(rightFoot, "Fire1");
+        } else if (leftFoot.transform.position.y > 0)
+        {
+            updateFoot(leftFoot, "Fire2");
+        }
+        else
+        {
+            // TODO: Ensure only one starts in one frame
+            updateFoot(rightFoot, "Fire1");
+            updateFoot(leftFoot, "Fire2");
+        }
 
         Vector3 upperBodyTarget = upperBody.transform.position;
         upperBodyTarget.z = (rightFoot.transform.position.z + leftFoot.transform.position.z) / 2;
@@ -32,10 +46,15 @@ public class FeetController : MonoBehaviour {
         if (Vector3.Distance(leftFoot.transform.position, rightFoot.transform.position) >= MAX_STRIDE)
         {
             // TODO: Trigger event
+            if (onOverStride != null)
+            {
+                onOverStride();
+            }
         }
     }
 
-    private void updateFoot(GameObject foot, string input)
+    // Return if the foot is moving
+    private bool updateFoot(GameObject foot, string input)
     {
         Vector3 movement = Vector3.zero;
         bool inputPressed = Input.GetButton(input);
@@ -46,6 +65,7 @@ public class FeetController : MonoBehaviour {
         }
 
         foot.transform.Translate(movement * Time.deltaTime);
+        return movement != Vector3.zero;
     }
 
     // Assumes 0 == ground
@@ -64,7 +84,7 @@ public class FeetController : MonoBehaviour {
         {
             if (currentHeight > 0.0f)
             {
-                return -VERTICAL_SPEED;
+                return -2*VERTICAL_SPEED;
             }
             else
             {
