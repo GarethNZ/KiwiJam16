@@ -27,3 +27,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+
+# Custom added
+ScriptAssemblies/*
