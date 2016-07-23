@@ -5,6 +5,8 @@ public class SpineTwistController : MonoBehaviour {
     public string leftRightInputAxis = "Horizontal";
     public string forwardBackInputAxis = "Vertical";
 
+    public bool isArm = false;
+
     // Both directions (+ & -)
     public float MAX_ROTATION = 45.0f;
     public float ROTATION_SPEED = 180.0f; // Full range in about 2 seconds
@@ -33,9 +35,15 @@ public class SpineTwistController : MonoBehaviour {
         // TODO: surely there is an easier way of doing all of this
         Vector3 newRotation = Vector3.zero;
         newRotation.z = MAX_ROTATION * Input.GetAxis(leftRightInputAxis);
-        newRotation.x = MAX_ROTATION * Input.GetAxis(forwardBackInputAxis);
+        if (isArm)
+        {
+            newRotation.y = MAX_ROTATION * Input.GetAxis(forwardBackInputAxis);
+        } else
+        {
+            newRotation.x = MAX_ROTATION * Input.GetAxis(forwardBackInputAxis);
+        }
 
-        Debug.Log("start = " + transform.localRotation.eulerAngles + " newRotation = " + newRotation);
+        //Debug.Log("start = " + transform.localRotation.eulerAngles + " newRotation = " + newRotation);
 
         Quaternion rotation = Quaternion.Euler(newRotation);
         // Slow rate of getting there:

@@ -39,6 +39,7 @@ public class FeetController : MonoBehaviour {
 
         if (Vector3.Distance(leftFoot.transform.position, rightFoot.transform.position) >= MAX_STRIDE)
         {
+            Debug.LogError("Feet too far apart, event onOverStride triggered");
             // TODO: Trigger event
             if (onOverStride != null)
             {
