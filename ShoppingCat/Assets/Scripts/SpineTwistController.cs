@@ -2,8 +2,10 @@
 
 public class SpineTwistController : MonoBehaviour {
 
-    public string rotationInputAxis;
+    public string leftRightInputAxis = "Horizontal";
+    public string forwardBackInputAxis = "Vertical";
 
+    public bool isArm = false;
 
     // Both directions (+ & -)
     public float MAX_ROTATION = 45.0f;
@@ -13,41 +15,49 @@ public class SpineTwistController : MonoBehaviour {
 	void Start () {
 	
 	}
-	
-	// Update is called once per frame
+
+    private float getWobbleValue()
+    {
+        return Random.Range(-5f, 5f);
+    }
+
+    private Quaternion wobbleTarget;
+    private Quaternion lastWobbleTarget;
+    private float lastWobbleUpdate;
+    private float WOBBLE_RATE = 1.0f;
+    private void updateWobbleTarget()
+    {
+        wobbleTarget = Quaternion.Euler(getWobbleValue(), getWobbleValue(), getWobbleValue());
+    }
+
+    // Update is called once per frame
 	void Update () {
-        float rotationValue = Input.GetAxis(rotationInputAxis);
-
-
-        if(rotationValue != 0)
+        // TODO: surely there is an easier way of doing all of this
+        Vector3 newRotation = Vector3.zero;
+        newRotation.z = MAX_ROTATION * Input.GetAxis(leftRightInputAxis);
+        if (isArm)
         {
-            Vector3 rotation = Vector3.zero;
-
-            float rangeFixedCurrentRotation = transform.localRotation.eulerAngles.z;
-            if (rangeFixedCurrentRotation > 180)
-            {
-                rangeFixedCurrentRotation -= 360f;
-            }
-
-            if (rotationValue > 0 && rangeFixedCurrentRotation > MAX_ROTATION)
-            {
-                rotationValue = 0f;
-            }
-            else if (rotationValue < 0 && rangeFixedCurrentRotation < -MAX_ROTATION)
-            {
-                rotationValue = 0f;
-            }
-            rotation.z = rotationValue * ROTATION_SPEED * Time.deltaTime;
-            transform.Rotate(rotation);
+            newRotation.y = MAX_ROTATION * Input.GetAxis(forwardBackInputAxis);
+        } else
+        {
+            newRotation.x = MAX_ROTATION * Input.GetAxis(forwardBackInputAxis);
         }
 
-        /*float verticalValue = Input.GetAxis(verticalInputAxis);
+        //Debug.Log("start = " + transform.localRotation.eulerAngles + " newRotation = " + newRotation);
 
-        if (verticalValue != 0)
+        Quaternion rotation = Quaternion.Euler(newRotation);
+        // Slow rate of getting there:
+        rotation = Quaternion.Lerp(transform.localRotation, rotation, 0.5f);
+        // Add Wobble
+        if (Time.time > lastWobbleUpdate + WOBBLE_RATE)
         {
-            transform
+            lastWobbleUpdate = Time.time;
+            lastWobbleTarget = wobbleTarget;
+            updateWobbleTarget();
         }
-        */
+        rotation *= Quaternion.Slerp(lastWobbleTarget, wobbleTarget, ((Time.time - lastWobbleUpdate) % WOBBLE_RATE) / WOBBLE_RATE);
+
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, rotation, 0.5f); ;
 
     }
 }
