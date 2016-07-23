@@ -10,9 +10,11 @@ public class HandPickup : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("OnTriggerEnter " + other.gameObject.name);
-        // TODO: Check other type
-        Destroy(other.gameObject);
-        scoreController.increment();
+        Debug.Log("OnTriggerEnter " + other.gameObject.tag);
+        if (other.gameObject.tag.Equals("PickUp"))
+        {
+            Destroy(other.gameObject);
+            scoreController.increment();
+        }
     }
 }

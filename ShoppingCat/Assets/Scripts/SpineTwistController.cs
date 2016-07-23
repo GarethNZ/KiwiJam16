@@ -2,8 +2,8 @@
 
 public class SpineTwistController : MonoBehaviour {
 
-    public string rotationInputAxis;
-
+    public string leftRightInputAxis = "Horizontal";
+    public string forwardBackInputAxis = "Vertical";
 
     // Both directions (+ & -)
     public float MAX_ROTATION = 45.0f;
@@ -16,14 +16,21 @@ public class SpineTwistController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float rotationValue = Input.GetAxis(rotationInputAxis);
+        Vector3 newRotation = transform.localRotation.eulerAngles;
+        newRotation.z = MAX_ROTATION * Input.GetAxis(leftRightInputAxis);
+        newRotation.x = MAX_ROTATION * Input.GetAxis(forwardBackInputAxis);
+        
+        transform.localRotation = Quaternion.Euler(newRotation);
 
+    }
 
-        if(rotationValue != 0)
+    private float getRotationForSingleAxis(float currentAngle, string inputAxis)
+    {
+        float rotationValue = Input.GetAxis(inputAxis);
+
+        if (rotationValue != 0)
         {
-            Vector3 rotation = Vector3.zero;
-
-            float rangeFixedCurrentRotation = transform.localRotation.eulerAngles.z;
+            float rangeFixedCurrentRotation = currentAngle;
             if (rangeFixedCurrentRotation > 180)
             {
                 rangeFixedCurrentRotation -= 360f;
@@ -37,17 +44,8 @@ public class SpineTwistController : MonoBehaviour {
             {
                 rotationValue = 0f;
             }
-            rotation.z = rotationValue * ROTATION_SPEED * Time.deltaTime;
-            transform.Rotate(rotation);
+            return rotationValue;
         }
-
-        /*float verticalValue = Input.GetAxis(verticalInputAxis);
-
-        if (verticalValue != 0)
-        {
-            transform
-        }
-        */
-
+        return 0f;
     }
 }
