@@ -3,11 +3,11 @@
 public class SpineTwistController : MonoBehaviour {
 
     public string rotationInputAxis;
-    //public string verticalInputAxis;
+
 
     // Both directions (+ & -)
-    private float MAX_ROTATION = 45.0f;
-    private float ROTATION_SPEED = 45.0f; // Full range in about 2 seconds
+    public float MAX_ROTATION = 45.0f;
+    public float ROTATION_SPEED = 180.0f; // Full range in about 2 seconds
     
 	// Use this for initialization
 	void Start () {
@@ -17,6 +17,7 @@ public class SpineTwistController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float rotationValue = Input.GetAxis(rotationInputAxis);
+
 
         if(rotationValue != 0)
         {
