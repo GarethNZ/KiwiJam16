@@ -13,39 +13,43 @@ public class SpineTwistController : MonoBehaviour {
 	void Start () {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        Vector3 newRotation = transform.localRotation.eulerAngles;
-        newRotation.z = MAX_ROTATION * Input.GetAxis(leftRightInputAxis);
-        newRotation.x = MAX_ROTATION * Input.GetAxis(forwardBackInputAxis);
-        
-        transform.localRotation = Quaternion.Euler(newRotation);
 
+    private float getWobbleValue()
+    {
+        return Random.Range(-5f, 5f);
     }
 
-    private float getRotationForSingleAxis(float currentAngle, string inputAxis)
+    private Quaternion wobbleTarget;
+    private Quaternion lastWobbleTarget;
+    private float lastWobbleUpdate;
+    private float WOBBLE_RATE = 1.0f;
+    private void updateWobbleTarget()
     {
-        float rotationValue = Input.GetAxis(inputAxis);
+        wobbleTarget = Quaternion.Euler(getWobbleValue(), getWobbleValue(), getWobbleValue());
+    }
 
-        if (rotationValue != 0)
+    // Update is called once per frame
+	void Update () {
+        // TODO: surely there is an easier way of doing all of this
+        Vector3 newRotation = Vector3.zero;
+        newRotation.z = MAX_ROTATION * Input.GetAxis(leftRightInputAxis);
+        newRotation.x = MAX_ROTATION * Input.GetAxis(forwardBackInputAxis);
+
+        Debug.Log("start = " + transform.localRotation.eulerAngles + " newRotation = " + newRotation);
+
+        Quaternion rotation = Quaternion.Euler(newRotation);
+        // Slow rate of getting there:
+        rotation = Quaternion.Lerp(transform.localRotation, rotation, 0.5f);
+        // Add Wobble
+        if (Time.time > lastWobbleUpdate + WOBBLE_RATE)
         {
-            float rangeFixedCurrentRotation = currentAngle;
-            if (rangeFixedCurrentRotation > 180)
-            {
-                rangeFixedCurrentRotation -= 360f;
-            }
-
-            if (rotationValue > 0 && rangeFixedCurrentRotation > MAX_ROTATION)
-            {
-                rotationValue = 0f;
-            }
-            else if (rotationValue < 0 && rangeFixedCurrentRotation < -MAX_ROTATION)
-            {
-                rotationValue = 0f;
-            }
-            return rotationValue;
+            lastWobbleUpdate = Time.time;
+            lastWobbleTarget = wobbleTarget;
+            updateWobbleTarget();
         }
-        return 0f;
+        rotation *= Quaternion.Slerp(lastWobbleTarget, wobbleTarget, ((Time.time - lastWobbleUpdate) % WOBBLE_RATE) / WOBBLE_RATE);
+
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, rotation, 0.5f); ;
+
     }
 }

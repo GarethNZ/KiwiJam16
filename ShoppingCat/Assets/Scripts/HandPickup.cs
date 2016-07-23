@@ -10,9 +10,10 @@ public class HandPickup : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("OnTriggerEnter " + other.gameObject.tag);
         if (other.gameObject.tag.Equals("PickUp"))
         {
+            Debug.Log("OnTriggerEnter " + other.gameObject.tag);
+
             Destroy(other.gameObject);
             scoreController.increment();
         }
