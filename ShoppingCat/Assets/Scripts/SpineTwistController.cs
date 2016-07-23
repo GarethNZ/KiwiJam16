@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class SpineTwistController : MonoBehaviour {
 
-    public string input;
+    public string rotationInputAxis;
+    //public string verticalInputAxis;
 
     // Both directions (+ & -)
     private float MAX_ROTATION = 45.0f;
@@ -16,27 +16,37 @@ public class SpineTwistController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float axisValue = Input.GetAxis(input);
-        Vector3 rotation = Vector3.zero;
-        
-        float rangeFixedCurrentRotation = transform.localRotation.eulerAngles.z;
-        if (rangeFixedCurrentRotation > 180)
+        float rotationValue = Input.GetAxis(rotationInputAxis);
+
+        if(rotationValue != 0)
         {
-            rangeFixedCurrentRotation -= 360f;
+            Vector3 rotation = Vector3.zero;
+
+            float rangeFixedCurrentRotation = transform.localRotation.eulerAngles.z;
+            if (rangeFixedCurrentRotation > 180)
+            {
+                rangeFixedCurrentRotation -= 360f;
+            }
+
+            if (rotationValue > 0 && rangeFixedCurrentRotation > MAX_ROTATION)
+            {
+                rotationValue = 0f;
+            }
+            else if (rotationValue < 0 && rangeFixedCurrentRotation < -MAX_ROTATION)
+            {
+                rotationValue = 0f;
+            }
+            rotation.z = rotationValue * ROTATION_SPEED * Time.deltaTime;
+            transform.Rotate(rotation);
         }
 
-        if (axisValue != 0)
-            Debug.Log("Rotation: " + rangeFixedCurrentRotation);
+        /*float verticalValue = Input.GetAxis(verticalInputAxis);
 
-        if (axisValue > 0 && rangeFixedCurrentRotation > MAX_ROTATION) {
-            axisValue = 0f;
-        }
-        else if (axisValue < 0 && rangeFixedCurrentRotation < -MAX_ROTATION)
+        if (verticalValue != 0)
         {
-            axisValue = 0f;
+            transform
         }
-        rotation.z = axisValue * ROTATION_SPEED * Time.deltaTime;
-        transform.Rotate(rotation);
+        */
 
     }
 }

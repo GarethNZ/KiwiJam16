@@ -21,9 +21,11 @@ public class PickupSpawner : MonoBehaviour {
             int pickup = Random.Range(0, pickups.Length);
             int position = Random.Range(0, targets.Length);
             Vector3 spawnPoint = targets[position].transform.position;
-            spawnPoint.y = Random.Range(0, 5.0f);
-            GameObject newPickup = Instantiate(pickups[pickup], spawnPoint, targets[position].transform.rotation) as GameObject;
-            newPickup.transform.SetParent(this.transform);
+            spawnPoint.y += Random.Range(-2.0f, 2.0f);
+            //GameObject newPickup = 
+            Instantiate(pickups[pickup], spawnPoint, targets[position].transform.rotation);
+            // TODO: bucket to hold them?
+            //newPickup.transform.SetParent(this.transform);
         }
 	}
 }
