@@ -18,14 +18,19 @@ public class FeetController : MonoBehaviour {
     //private Vector3 VERTICAL_SPEED = new Vector3(0, 2.0f, 0);
     private const float MAX_HEIGHT = 5.0f;
 
+
+    private float leftNoiseOffset;
+    private float rightNoiseOffset;
     // Use this for initialization
     void Start() {
+        leftNoiseOffset = Random.Range(0, 100f);
+        rightNoiseOffset = Random.Range(0, 100f);
     }
 
     // Update is called once per frame
     void Update() {
-        updateFoot(rightFoot, "2Horizontal", "2Vertical");
-        updateFoot(leftFoot, "2Horizontal_b", "2Vertical_b");
+        updateFoot(rightFoot, "2Horizontal", "2Vertical", rightNoiseOffset);
+        updateFoot(leftFoot, "2Horizontal_b", "2Vertical_b", leftNoiseOffset);
 
         Vector3 upperBodyTarget = upperBody.transform.position;
         upperBodyTarget.z = (rightFoot.transform.position.z + leftFoot.transform.position.z) / 2;
@@ -42,12 +47,18 @@ public class FeetController : MonoBehaviour {
         }
     }
 
+    private float NOISE_AMPLITUDE = 0.5f;
+
+    private float getNoise(float offset)
+    {
+        return NOISE_AMPLITUDE * (Mathf.PerlinNoise(Time.time + offset, 0) - 0.5f);
+    }
     // Return if the foot is moving
-    private void updateFoot(GameObject foot, string leftRightAxis, string forwardBackAxis)
+    private void updateFoot(GameObject foot, string leftRightAxis, string forwardBackAxis, float noiseOffset)
     {
         Vector3 movement = Vector3.zero;
-        movement.x = Input.GetAxis(leftRightAxis);
-        movement.z = Input.GetAxis(forwardBackAxis);
+        movement.x = Input.GetAxis(leftRightAxis) + getNoise(noiseOffset);
+        movement.z = Input.GetAxis(forwardBackAxis) + getNoise(noiseOffset);
         foot.transform.Translate(movement * MAX_SPEED * Time.deltaTime);
     }
 }
