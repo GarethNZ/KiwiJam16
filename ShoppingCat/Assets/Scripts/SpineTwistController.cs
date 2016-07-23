@@ -10,28 +10,31 @@ public class SpineTwistController : MonoBehaviour {
     // Both directions (+ & -)
     public float MAX_ROTATION = 45.0f;
     public float ROTATION_SPEED = 180.0f; // Full range in about 2 seconds
-    
-	// Use this for initialization
-	void Start () {
-	
-	}
 
-    private float getWobbleValue()
+    private float xNoiseOffset;
+    private float yNoiseOffset;
+    private float zNoiseOffset;
+    // Use this for initialization
+    void Start()
     {
-        return Random.Range(-5f, 5f);
+        xNoiseOffset = Random.Range(0, 100f);
+        yNoiseOffset = Random.Range(0, 100f);
+        zNoiseOffset = Random.Range(0, 100f);
     }
 
-    private Quaternion wobbleTarget;
-    private Quaternion lastWobbleTarget;
-    private float lastWobbleUpdate;
-    private float WOBBLE_RATE = 1.0f;
-    private void updateWobbleTarget()
+    private float NOISE_AMPLITUDE = 5.0f;
+
+    private float getNoise(float offset)
     {
-        wobbleTarget = Quaternion.Euler(getWobbleValue(), getWobbleValue(), getWobbleValue());
+        return NOISE_AMPLITUDE * (Mathf.PerlinNoise(Time.time + offset, 0) - 0.5f);
     }
 
+    private Quaternion getNoiseVector()
+    {
+        return Quaternion.Euler(getNoise(xNoiseOffset), getNoise(yNoiseOffset), getNoise(zNoiseOffset));
+    }
     // Update is called once per frame
-	void Update () {
+    void Update () {
         // TODO: surely there is an easier way of doing all of this
         Vector3 newRotation = Vector3.zero;
         newRotation.z = MAX_ROTATION * Input.GetAxis(leftRightInputAxis);
@@ -49,13 +52,7 @@ public class SpineTwistController : MonoBehaviour {
         // Slow rate of getting there:
         rotation = Quaternion.Lerp(transform.localRotation, rotation, 0.5f);
         // Add Wobble
-        if (Time.time > lastWobbleUpdate + WOBBLE_RATE)
-        {
-            lastWobbleUpdate = Time.time;
-            lastWobbleTarget = wobbleTarget;
-            updateWobbleTarget();
-        }
-        rotation *= Quaternion.Slerp(lastWobbleTarget, wobbleTarget, ((Time.time - lastWobbleUpdate) % WOBBLE_RATE) / WOBBLE_RATE);
+        rotation *= getNoiseVector();
 
         transform.localRotation = Quaternion.Slerp(transform.localRotation, rotation, 0.5f); ;
 
