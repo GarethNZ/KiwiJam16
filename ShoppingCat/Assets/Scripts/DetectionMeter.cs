@@ -20,7 +20,10 @@ class DetectionMeter : MonoBehaviour
     void Update()
     {
         totalDetection += (isObstacle ? OBSTACLE_DETECTION_RATE : STANDARD_DETECTION_RATE) * Time.deltaTime;
-
+        if (totalDetection > 100)
+        {
+            // TODO: Game fail
+        }
         Vector3 newScale = transform.localScale;
         newScale.x = totalDetection;
         transform.localScale = newScale;
