@@ -15,6 +15,8 @@ public class FeetController : MonoBehaviour {
     public GameObject leftFoot;
     public GameObject rightFoot;
 
+    private GameObject GameBounds;
+
     private const float MAX_SPEED = 5.0f;
     //private Vector3 MOVE_FORWARD = new Vector3(0, 0, MAX_SPEED);
 
@@ -33,6 +35,9 @@ public class FeetController : MonoBehaviour {
 
         leftInputs = InputRandomizer.inputMaps[setOfInputsLeft];
         rightInputs = InputRandomizer.inputMaps[setOfInputsRight];
+
+        GameBounds = GameObject.Find("GameBounds");
+        //GameBounds.transform
     }
 
     // Update is called once per frame
@@ -90,6 +95,10 @@ public class FeetController : MonoBehaviour {
         movement.x = -Input.GetAxis(leftRightAxis) + getNoise(noiseOffset);
         movement.z = Input.GetAxis(forwardBackAxis) + getNoise(noiseOffset);
         foot.transform.Translate(movement * MAX_SPEED * Time.deltaTime);
+
+        float xPos = Mathf.Clamp(foot.transform.position.x, -10f, 13f);
+        float zPos = Mathf.Clamp(foot.transform.position.z, -76f, 65f);
+        foot.transform.position = new Vector3(xPos, foot.transform.position.y, zPos);
 
         return Input.GetAxis(leftRightAxis) != 0f || Input.GetAxis(forwardBackAxis) != 0f;
     }

@@ -5,10 +5,12 @@ public class ItemMeter : MonoBehaviour {
     private int itemsCollected = 0;
     private int TOTAL_ITEMS = 115;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    private AudioSource itemAudio;
+
+    // Use this for initialization
+    void Start () {
+        itemAudio = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,5 +24,6 @@ public class ItemMeter : MonoBehaviour {
     public void itemCollected()
     {
         itemsCollected++;
+        itemAudio.Play();
     }
 }
