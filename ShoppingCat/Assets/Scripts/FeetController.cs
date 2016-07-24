@@ -76,7 +76,6 @@ public class FeetController : MonoBehaviour {
         //Vector3.Lerp
         //upperBodyTarget.z = (rightFoot.transform.position.z + leftFoot.transform.position.z) / 2;
         //upperBodyTarget.x = (rightFoot.transform.position.x + leftFoot.transform.position.x) / 2;
-        Debug.Log("upperBodyTarget = " + upperBodyTarget + " left = " + leftFoot.transform.position + " right = " + rightFoot.transform.position);
         upperBody.transform.position = Vector3.MoveTowards(upperBody.transform.position, upperBodyTarget, MAX_SPEED * Time.deltaTime);
 
     }
