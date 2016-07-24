@@ -2,10 +2,10 @@
 
 public class HandPickup : MonoBehaviour {
 
-    private ScoreController scoreController;
+    private ItemMeter itemMeter;
 	// Use this for initialization
 	void Start () {
-        scoreController = FindObjectOfType<ScoreController>();
+        itemMeter = FindObjectOfType<ItemMeter>();
 	}
 
     void OnTriggerEnter(Collider other)
@@ -15,7 +15,7 @@ public class HandPickup : MonoBehaviour {
             Debug.Log("OnTriggerEnter " + other.gameObject.tag);
 
             Destroy(other.gameObject);
-            scoreController.increment();
+            itemMeter.itemCollected();
         }
     }
 }
