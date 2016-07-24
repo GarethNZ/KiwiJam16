@@ -3,7 +3,7 @@
 public class ItemMeter : MonoBehaviour {
 
     private int itemsCollected = 0;
-    private int TOTAL_ITEMS = 115;
+    private int REQUIRED_ITEMS = 25;
 
     private AudioSource itemAudio;
 
@@ -14,10 +14,10 @@ public class ItemMeter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float xScale = itemsCollected / TOTAL_ITEMS * 100;
+        float xScale = ((float)itemsCollected / (float)REQUIRED_ITEMS) * 100f;
 
         Vector3 newScale = transform.localScale;
-        newScale.x = itemsCollected;
+        newScale.x = xScale < 100 ? xScale : 100;
         transform.localScale = newScale;
     }
 
@@ -25,5 +25,10 @@ public class ItemMeter : MonoBehaviour {
     {
         itemsCollected++;
         itemAudio.Play();
+    }
+
+    public bool hasRequiredItems()
+    {
+        return itemsCollected > REQUIRED_ITEMS;
     }
 }
