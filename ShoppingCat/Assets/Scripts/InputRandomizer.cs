@@ -14,6 +14,7 @@ public class InputRandomizer : MonoBehaviour {
         }
     }
 
+    // TODO: Support more states and dividing by total number of controllers (2-4p games)
     public enum DualInputSet
     {
         A, B, C, D
