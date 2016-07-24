@@ -17,7 +17,7 @@ public class InputRandomizer : MonoBehaviour {
     // TODO: Support more states and dividing by total number of controllers (2-4p games)
     public enum DualInputSet
     {
-        A, B, C, D
+        A, B, C, D, E, F
     }
 
     public static Dictionary<DualInputSet, DualAxisInput> inputMaps = new Dictionary<DualInputSet, DualAxisInput>();
@@ -39,6 +39,8 @@ public class InputRandomizer : MonoBehaviour {
         new DualAxisInput("Horizontal", "Vertical"),
         new DualAxisInput("Horizontal_b", "Vertical_b"),
         new DualAxisInput("2Horizontal", "2Vertical"),
-        new DualAxisInput("2Horizontal_b", "2Vertical_b")
+        new DualAxisInput("2Horizontal_b", "2Vertical_b"),
+        new DualAxisInput("3Horizontal", "3Vertical"),
+        new DualAxisInput("3Horizontal_b", "3Vertical_b")
     };
 }
