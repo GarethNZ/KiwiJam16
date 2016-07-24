@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 7faf8b2ab2eb14fb0b3ae636a9310e58
+timeCreated: 1469342004
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arm_left_joint
+    100002: arm_right_joint
+    100004: buttom01_GEO
+    100006: buttom02_GEO
+    100008: buttom03_GEO
+    100010: CatHead_bottom_GEO
+    100012: CatHead_middle_GEO
+    100014: CatHead_TOP_GEO
+    100016: CatStuff1:ctrl
+    100018: CatStuff1:Ctrls
+    100020: CatStuff1:Geo
+    100022: CatStuff1:Geo 1
+    100024: CatStuff1:jnt_01_ctrl
+    100026: CatStuff1:jnt_02_ctrl
+    100028: CatStuff1:jnt_03_ctrl
+    100030: CatStuff1:jnt_04_ctrl
+    100032: CatStuff1:jnt_05_ctrl
+    100034: CatStuff1:jnt_06_ctrl
+    100036: CatStuff1:jnt_07_ctrl
+    100038: CatStuff1:jnt_08_ctrl
+    100040: CatStuff1:Jnts
+    100042: CatStuff1:Jnts 1
+    100044: CatStuff1:mstr_ctrl
+    100046: CatStuff1:mstr_ctrl 1
+    100048: CatStuff1:Paw
+    100050: CatStuff1:Paw_02
+    100052: CatStuff1:paw_ctrl_01
+    100054: CatStuff1:paw_ctrl_02
+    100056: CatStuff1:paw_ctrl_03
+    100058: CatStuff1:Paw_jnt_01
+    100060: CatStuff1:Paw_jnt_02
+    100062: CatStuff1:Paw_jnt_03
+    100064: CatStuff1:Paw_jnt_end
+    100066: CatStuff1:Tail_02
+    100068: CatStuff1:tail_jnt_01
+    100070: CatStuff1:tail_jnt_02
+    100072: CatStuff1:tail_jnt_03
+    100074: CatStuff1:tail_jnt_04
+    100076: CatStuff1:tail_jnt_05
+    100078: CatStuff1:tail_jnt_06
+    100080: CatStuff1:tail_jnt_07
+    100082: CatStuff1:tail_jnt_08
+    100084: CatStuff1:tail_jnt_end
+    100086: CatStuff1:TailRig
+    100088: CatStuff:ctrl
+    100090: CatStuff:Ctrls
+    100092: CatStuff:Geo
+    100094: CatStuff:Geo 1
+    100096: CatStuff:jnt_01_ctrl
+    100098: CatStuff:jnt_02_ctrl
+    100100: CatStuff:jnt_03_ctrl
+    100102: CatStuff:jnt_04_ctrl
+    100104: CatStuff:jnt_05_ctrl
+    100106: CatStuff:jnt_06_ctrl
+    100108: CatStuff:jnt_07_ctrl
+    100110: CatStuff:jnt_08_ctrl
+    100112: CatStuff:Jnts
+    100114: CatStuff:Jnts 1
+    100116: CatStuff:mstr_ctrl
+    100118: CatStuff:mstr_ctrl 1
+    100120: CatStuff:Paw
+    100122: CatStuff:Paw_02
+    100124: CatStuff:paw_ctrl_01
+    100126: CatStuff:paw_ctrl_02
+    100128: CatStuff:paw_ctrl_03
+    100130: CatStuff:Paw_jnt_01
+    100132: CatStuff:Paw_jnt_02
+    100134: CatStuff:Paw_jnt_03
+    100136: CatStuff:Paw_jnt_end
+    100138: CatStuff:Tail_02
+    100140: CatStuff:tail_jnt_01
+    100142: CatStuff:tail_jnt_02
+    100144: CatStuff:tail_jnt_03
+    100146: CatStuff:tail_jnt_04
+    100148: CatStuff:tail_jnt_05
+    100150: CatStuff:tail_jnt_06
+    100152: CatStuff:tail_jnt_07
+    100154: CatStuff:tail_jnt_08
+    100156: CatStuff:tail_jnt_end
+    100158: CatStuff:TailRig
+    100160: Coat_GEO
+    100162: collar_GEO
+    100164: hand_left_joint
+    100166: hand_right_joint
+    100168: Hat_GEO
+    100170: head_joint
+    100172: hip_joint
+    100174: leg_left_joint
+    100176: leg_right_joint
+    100178: MESH2
+    100180: Paw_left_GEO001
+    100182: Paw_left_GEO002
+    100184: pCube021
+    100186: pCube9
+    100188: RIG
+    100190: //RootNode
+    100192: shoulders_joint
+    100194: tailAnim:CatStuff:Ctrls
+    100196: tailAnim:CatStuff:Geo
+    100198: tailAnim:CatStuff:jnt_01_ctrl
+    100200: tailAnim:CatStuff:jnt_02_ctrl
+    100202: tailAnim:CatStuff:jnt_03_ctrl
+    100204: tailAnim:CatStuff:jnt_04_ctrl
+    100206: tailAnim:CatStuff:jnt_05_ctrl
+    100208: tailAnim:CatStuff:jnt_06_ctrl
+    100210: tailAnim:CatStuff:jnt_07_ctrl
+    100212: tailAnim:CatStuff:jnt_08_ctrl
+    100214: tailAnim:CatStuff:Jnts
+    100216: tailAnim:CatStuff:mstr_ctrl
+    100218: tailAnim:CatStuff:Tail_02
+    100220: tailAnim:CatStuff:tail_jnt_01
+    100222: tailAnim:CatStuff:tail_jnt_02
+    100224: tailAnim:CatStuff:tail_jnt_03
+    100226: tailAnim:CatStuff:tail_jnt_04
+    100228: tailAnim:CatStuff:tail_jnt_05
+    100230: tailAnim:CatStuff:tail_jnt_06
+    100232: tailAnim:CatStuff:tail_jnt_07
+    100234: tailAnim:CatStuff:tail_jnt_08
+    100236: tailAnim:CatStuff:tail_jnt_end
+    100238: tailAnim:CatStuff:TailRig
+    100240: waist_joint
+    100242: wriskle01
+    100244: wriskle011
+    100246: wriskle012
+    100248: wriskle02
+    100250: wriskle03
+    100252: wriskle04
+    100254: wriskle05
+    100256: wriskle06
+    100258: wriskle07'
+    100260: wriskle08
+    100262: wriskle09
+    100264: wriskle10
+    400000: arm_left_joint
+    400002: arm_right_joint
+    400004: buttom01_GEO
+    400006: buttom02_GEO
+    400008: buttom03_GEO
+    400010: CatHead_bottom_GEO
+    400012: CatHead_middle_GEO
+    400014: CatHead_TOP_GEO
+    400016: CatStuff1:ctrl
+    400018: CatStuff1:Ctrls
+    400020: CatStuff1:Geo
+    400022: CatStuff1:Geo 1
+    400024: CatStuff1:jnt_01_ctrl
+    400026: CatStuff1:jnt_02_ctrl
+    400028: CatStuff1:jnt_03_ctrl
+    400030: CatStuff1:jnt_04_ctrl
+    400032: CatStuff1:jnt_05_ctrl
+    400034: CatStuff1:jnt_06_ctrl
+    400036: CatStuff1:jnt_07_ctrl
+    400038: CatStuff1:jnt_08_ctrl
+    400040: CatStuff1:Jnts
+    400042: CatStuff1:Jnts 1
+    400044: CatStuff1:mstr_ctrl
+    400046: CatStuff1:mstr_ctrl 1
+    400048: CatStuff1:Paw
+    400050: CatStuff1:Paw_02
+    400052: CatStuff1:paw_ctrl_01
+    400054: CatStuff1:paw_ctrl_02
+    400056: CatStuff1:paw_ctrl_03
+    400058: CatStuff1:Paw_jnt_01
+    400060: CatStuff1:Paw_jnt_02
+    400062: CatStuff1:Paw_jnt_03
+    400064: CatStuff1:Paw_jnt_end
+    400066: CatStuff1:Tail_02
+    400068: CatStuff1:tail_jnt_01
+    400070: CatStuff1:tail_jnt_02
+    400072: CatStuff1:tail_jnt_03
+    400074: CatStuff1:tail_jnt_04
+    400076: CatStuff1:tail_jnt_05
+    400078: CatStuff1:tail_jnt_06
+    400080: CatStuff1:tail_jnt_07
+    400082: CatStuff1:tail_jnt_08
+    400084: CatStuff1:tail_jnt_end
+    400086: CatStuff1:TailRig
+    400088: CatStuff:ctrl
+    400090: CatStuff:Ctrls
+    400092: CatStuff:Geo
+    400094: CatStuff:Geo 1
+    400096: CatStuff:jnt_01_ctrl
+    400098: CatStuff:jnt_02_ctrl
+    400100: CatStuff:jnt_03_ctrl
+    400102: CatStuff:jnt_04_ctrl
+    400104: CatStuff:jnt_05_ctrl
+    400106: CatStuff:jnt_06_ctrl
+    400108: CatStuff:jnt_07_ctrl
+    400110: CatStuff:jnt_08_ctrl
+    400112: CatStuff:Jnts
+    400114: CatStuff:Jnts 1
+    400116: CatStuff:mstr_ctrl
+    400118: CatStuff:mstr_ctrl 1
+    400120: CatStuff:Paw
+    400122: CatStuff:Paw_02
+    400124: CatStuff:paw_ctrl_01
+    400126: CatStuff:paw_ctrl_02
+    400128: CatStuff:paw_ctrl_03
+    400130: CatStuff:Paw_jnt_01
+    400132: CatStuff:Paw_jnt_02
+    400134: CatStuff:Paw_jnt_03
+    400136: CatStuff:Paw_jnt_end
+    400138: CatStuff:Tail_02
+    400140: CatStuff:tail_jnt_01
+    400142: CatStuff:tail_jnt_02
+    400144: CatStuff:tail_jnt_03
+    400146: CatStuff:tail_jnt_04
+    400148: CatStuff:tail_jnt_05
+    400150: CatStuff:tail_jnt_06
+    400152: CatStuff:tail_jnt_07
+    400154: CatStuff:tail_jnt_08
+    400156: CatStuff:tail_jnt_end
+    400158: CatStuff:TailRig
+    400160: Coat_GEO
+    400162: collar_GEO
+    400164: hand_left_joint
+    400166: hand_right_joint
+    400168: Hat_GEO
+    400170: head_joint
+    400172: hip_joint
+    400174: leg_left_joint
+    400176: leg_right_joint
+    400178: MESH2
+    400180: Paw_left_GEO001
+    400182: Paw_left_GEO002
+    400184: pCube021
+    400186: pCube9
+    400188: RIG
+    400190: //RootNode
+    400192: shoulders_joint
+    400194: tailAnim:CatStuff:Ctrls
+    400196: tailAnim:CatStuff:Geo
+    400198: tailAnim:CatStuff:jnt_01_ctrl
+    400200: tailAnim:CatStuff:jnt_02_ctrl
+    400202: tailAnim:CatStuff:jnt_03_ctrl
+    400204: tailAnim:CatStuff:jnt_04_ctrl
+    400206: tailAnim:CatStuff:jnt_05_ctrl
+    400208: tailAnim:CatStuff:jnt_06_ctrl
+    400210: tailAnim:CatStuff:jnt_07_ctrl
+    400212: tailAnim:CatStuff:jnt_08_ctrl
+    400214: tailAnim:CatStuff:Jnts
+    400216: tailAnim:CatStuff:mstr_ctrl
+    400218: tailAnim:CatStuff:Tail_02
+    400220: tailAnim:CatStuff:tail_jnt_01
+    400222: tailAnim:CatStuff:tail_jnt_02
+    400224: tailAnim:CatStuff:tail_jnt_03
+    400226: tailAnim:CatStuff:tail_jnt_04
+    400228: tailAnim:CatStuff:tail_jnt_05
+    400230: tailAnim:CatStuff:tail_jnt_06
+    400232: tailAnim:CatStuff:tail_jnt_07
+    400234: tailAnim:CatStuff:tail_jnt_08
+    400236: tailAnim:CatStuff:tail_jnt_end
+    400238: tailAnim:CatStuff:TailRig
+    400240: waist_joint
+    400242: wriskle01
+    400244: wriskle011
+    400246: wriskle012
+    400248: wriskle02
+    400250: wriskle03
+    400252: wriskle04
+    400254: wriskle05
+    400256: wriskle06
+    400258: wriskle07'
+    400260: wriskle08
+    400262: wriskle09
+    400264: wriskle10
+    2300000: pCube021
+    2300002: pCube9
+    3300000: pCube021
+    3300002: pCube9
+    4300000: pCube9
+    4300002: pCube021
+    4300004: Coat_GEO
+    4300006: wriskle03
+    4300008: wriskle04
+    4300010: wriskle02
+    4300012: wriskle01
+    4300014: wriskle07'
+    4300016: wriskle08
+    4300018: wriskle06
+    4300020: wriskle05
+    4300022: collar_GEO
+    4300024: wriskle011
+    4300026: wriskle012
+    4300028: wriskle10
+    4300030: wriskle09
+    4300032: buttom03_GEO
+    4300034: buttom02_GEO
+    4300036: buttom01_GEO
+    4300038: CatHead_bottom_GEO
+    4300040: CatHead_middle_GEO
+    4300042: CatHead_TOP_GEO
+    4300044: Hat_GEO
+    4300046: Paw_left_GEO001
+    4300048: Paw_left_GEO002
+    4300050: CatStuff:Tail_02
+    4300052: CatStuff:Paw_02
+    4300054: CatStuff1:Tail_02
+    4300056: CatStuff1:Paw_02
+    4300058: tailAnim:CatStuff:Tail_02
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: buttom01_GEO
+    13700002: buttom02_GEO
+    13700004: buttom03_GEO
+    13700006: CatHead_bottom_GEO
+    13700008: CatHead_middle_GEO
+    13700010: CatHead_TOP_GEO
+    13700012: CatStuff1:Paw_02
+    13700014: CatStuff1:Tail_02
+    13700016: CatStuff:Paw_02
+    13700018: CatStuff:Tail_02
+    13700020: Coat_GEO
+    13700022: collar_GEO
+    13700024: Hat_GEO
+    13700026: Paw_left_GEO001
+    13700028: Paw_left_GEO002
+    13700030: tailAnim:CatStuff:Tail_02
+    13700032: wriskle01
+    13700034: wriskle011
+    13700036: wriskle012
+    13700038: wriskle02
+    13700040: wriskle03
+    13700042: wriskle04
+    13700044: wriskle05
+    13700046: wriskle06
+    13700048: wriskle07'
+    13700050: wriskle08
+    13700052: wriskle09
+    13700054: wriskle10
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MESH2
+        weight: 1
+      - path: MESH2/buttom01_GEO
+        weight: 1
+      - path: MESH2/buttom02_GEO
+        weight: 1
+      - path: MESH2/buttom03_GEO
+        weight: 1
+      - path: MESH2/CatHead_bottom_GEO
+        weight: 1
+      - path: MESH2/CatHead_middle_GEO
+        weight: 1
+      - path: MESH2/CatHead_TOP_GEO
+        weight: 1
+      - path: MESH2/CatStuff1:Paw_02
+        weight: 1
+      - path: MESH2/CatStuff1:Tail_02
+        weight: 1
+      - path: MESH2/CatStuff:Paw_02
+        weight: 1
+      - path: MESH2/CatStuff:Tail_02
+        weight: 1
+      - path: MESH2/Coat_GEO
+        weight: 1
+      - path: MESH2/collar_GEO
+        weight: 1
+      - path: MESH2/Hat_GEO
+        weight: 1
+      - path: MESH2/Paw_left_GEO001
+        weight: 1
+      - path: MESH2/Paw_left_GEO002
+        weight: 1
+      - path: MESH2/tailAnim:CatStuff:Tail_02
+        weight: 1
+      - path: MESH2/wriskle01
+        weight: 1
+      - path: MESH2/wriskle02
+        weight: 1
+      - path: MESH2/wriskle03
+        weight: 1
+      - path: MESH2/wriskle04
+        weight: 1
+      - path: MESH2/wriskle05
+        weight: 1
+      - path: MESH2/wriskle06
+        weight: 1
+      - path: MESH2/wriskle07'
+        weight: 1
+      - path: MESH2/wriskle08
+        weight: 1
+      - path: MESH2/wriskle09
+        weight: 1
+      - path: MESH2/wriskle10
+        weight: 1
+      - path: MESH2/wriskle011
+        weight: 1
+      - path: MESH2/wriskle012
+        weight: 1
+      - path: RIG
+        weight: 1
+      - path: RIG/hip_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw/CatStuff:ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw/CatStuff:ctrl/CatStuff:paw_ctrl_01
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw/CatStuff:ctrl/CatStuff:paw_ctrl_01/CatStuff:paw_ctrl_02
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw/CatStuff:ctrl/CatStuff:paw_ctrl_01/CatStuff:paw_ctrl_02/CatStuff:paw_ctrl_03
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw/CatStuff:Geo 1
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw/CatStuff:Jnts 1
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw/CatStuff:Jnts 1/CatStuff:Paw_jnt_01
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw/CatStuff:Jnts 1/CatStuff:Paw_jnt_01/CatStuff:Paw_jnt_02
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw/CatStuff:Jnts 1/CatStuff:Paw_jnt_01/CatStuff:Paw_jnt_02/CatStuff:Paw_jnt_03
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw/CatStuff:Jnts 1/CatStuff:Paw_jnt_01/CatStuff:Paw_jnt_02/CatStuff:Paw_jnt_03/CatStuff:Paw_jnt_end
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/CatStuff:Paw/CatStuff:mstr_ctrl 1
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/CatStuff1:Paw
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/CatStuff1:Paw/CatStuff1:ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/CatStuff1:Paw/CatStuff1:ctrl/CatStuff1:paw_ctrl_01
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/CatStuff1:Paw/CatStuff1:ctrl/CatStuff1:paw_ctrl_01/CatStuff1:paw_ctrl_02
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/CatStuff1:Paw/CatStuff1:ctrl/CatStuff1:paw_ctrl_01/CatStuff1:paw_ctrl_02/CatStuff1:paw_ctrl_03
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/CatStuff1:Paw/CatStuff1:Geo
+          1
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/CatStuff1:Paw/CatStuff1:Jnts
+          1
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/CatStuff1:Paw/CatStuff1:Jnts
+          1/CatStuff1:Paw_jnt_01
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/CatStuff1:Paw/CatStuff1:Jnts
+          1/CatStuff1:Paw_jnt_01/CatStuff1:Paw_jnt_02
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/CatStuff1:Paw/CatStuff1:Jnts
+          1/CatStuff1:Paw_jnt_01/CatStuff1:Paw_jnt_02/CatStuff1:Paw_jnt_03
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/CatStuff1:Paw/CatStuff1:Jnts
+          1/CatStuff1:Paw_jnt_01/CatStuff1:Paw_jnt_02/CatStuff1:Paw_jnt_03/CatStuff1:Paw_jnt_end
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/hand_left_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/pCube021
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/pCube021/CatStuff1:mstr_ctrl
+          1
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_right_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_right_joint/hand_right_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:mstr_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Ctrls
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Ctrls/CatStuff1:jnt_01_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Ctrls/CatStuff1:jnt_01_ctrl/CatStuff1:jnt_02_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Ctrls/CatStuff1:jnt_01_ctrl/CatStuff1:jnt_02_ctrl/CatStuff1:jnt_03_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Ctrls/CatStuff1:jnt_01_ctrl/CatStuff1:jnt_02_ctrl/CatStuff1:jnt_03_ctrl/CatStuff1:jnt_04_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Ctrls/CatStuff1:jnt_01_ctrl/CatStuff1:jnt_02_ctrl/CatStuff1:jnt_03_ctrl/CatStuff1:jnt_04_ctrl/CatStuff1:jnt_05_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Ctrls/CatStuff1:jnt_01_ctrl/CatStuff1:jnt_02_ctrl/CatStuff1:jnt_03_ctrl/CatStuff1:jnt_04_ctrl/CatStuff1:jnt_05_ctrl/CatStuff1:jnt_06_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Ctrls/CatStuff1:jnt_01_ctrl/CatStuff1:jnt_02_ctrl/CatStuff1:jnt_03_ctrl/CatStuff1:jnt_04_ctrl/CatStuff1:jnt_05_ctrl/CatStuff1:jnt_06_ctrl/CatStuff1:jnt_07_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Ctrls/CatStuff1:jnt_01_ctrl/CatStuff1:jnt_02_ctrl/CatStuff1:jnt_03_ctrl/CatStuff1:jnt_04_ctrl/CatStuff1:jnt_05_ctrl/CatStuff1:jnt_06_ctrl/CatStuff1:jnt_07_ctrl/CatStuff1:jnt_08_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Geo
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Jnts
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Jnts/CatStuff1:tail_jnt_01
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Jnts/CatStuff1:tail_jnt_01/CatStuff1:tail_jnt_02
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Jnts/CatStuff1:tail_jnt_01/CatStuff1:tail_jnt_02/CatStuff1:tail_jnt_03
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Jnts/CatStuff1:tail_jnt_01/CatStuff1:tail_jnt_02/CatStuff1:tail_jnt_03/CatStuff1:tail_jnt_04
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Jnts/CatStuff1:tail_jnt_01/CatStuff1:tail_jnt_02/CatStuff1:tail_jnt_03/CatStuff1:tail_jnt_04/CatStuff1:tail_jnt_05
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Jnts/CatStuff1:tail_jnt_01/CatStuff1:tail_jnt_02/CatStuff1:tail_jnt_03/CatStuff1:tail_jnt_04/CatStuff1:tail_jnt_05/CatStuff1:tail_jnt_06
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Jnts/CatStuff1:tail_jnt_01/CatStuff1:tail_jnt_02/CatStuff1:tail_jnt_03/CatStuff1:tail_jnt_04/CatStuff1:tail_jnt_05/CatStuff1:tail_jnt_06/CatStuff1:tail_jnt_07
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Jnts/CatStuff1:tail_jnt_01/CatStuff1:tail_jnt_02/CatStuff1:tail_jnt_03/CatStuff1:tail_jnt_04/CatStuff1:tail_jnt_05/CatStuff1:tail_jnt_06/CatStuff1:tail_jnt_07/CatStuff1:tail_jnt_08
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/CatStuff1:TailRig/CatStuff1:Jnts/CatStuff1:tail_jnt_01/CatStuff1:tail_jnt_02/CatStuff1:tail_jnt_03/CatStuff1:tail_jnt_04/CatStuff1:tail_jnt_05/CatStuff1:tail_jnt_06/CatStuff1:tail_jnt_07/CatStuff1:tail_jnt_08/CatStuff1:tail_jnt_end
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/head_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/head_joint/pCube9
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:mstr_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Ctrls
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Ctrls/tailAnim:CatStuff:jnt_01_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Ctrls/tailAnim:CatStuff:jnt_01_ctrl/tailAnim:CatStuff:jnt_02_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Ctrls/tailAnim:CatStuff:jnt_01_ctrl/tailAnim:CatStuff:jnt_02_ctrl/tailAnim:CatStuff:jnt_03_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Ctrls/tailAnim:CatStuff:jnt_01_ctrl/tailAnim:CatStuff:jnt_02_ctrl/tailAnim:CatStuff:jnt_03_ctrl/tailAnim:CatStuff:jnt_04_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Ctrls/tailAnim:CatStuff:jnt_01_ctrl/tailAnim:CatStuff:jnt_02_ctrl/tailAnim:CatStuff:jnt_03_ctrl/tailAnim:CatStuff:jnt_04_ctrl/tailAnim:CatStuff:jnt_05_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Ctrls/tailAnim:CatStuff:jnt_01_ctrl/tailAnim:CatStuff:jnt_02_ctrl/tailAnim:CatStuff:jnt_03_ctrl/tailAnim:CatStuff:jnt_04_ctrl/tailAnim:CatStuff:jnt_05_ctrl/tailAnim:CatStuff:jnt_06_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Ctrls/tailAnim:CatStuff:jnt_01_ctrl/tailAnim:CatStuff:jnt_02_ctrl/tailAnim:CatStuff:jnt_03_ctrl/tailAnim:CatStuff:jnt_04_ctrl/tailAnim:CatStuff:jnt_05_ctrl/tailAnim:CatStuff:jnt_06_ctrl/tailAnim:CatStuff:jnt_07_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Ctrls/tailAnim:CatStuff:jnt_01_ctrl/tailAnim:CatStuff:jnt_02_ctrl/tailAnim:CatStuff:jnt_03_ctrl/tailAnim:CatStuff:jnt_04_ctrl/tailAnim:CatStuff:jnt_05_ctrl/tailAnim:CatStuff:jnt_06_ctrl/tailAnim:CatStuff:jnt_07_ctrl/tailAnim:CatStuff:jnt_08_ctrl
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Geo
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Jnts
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Jnts/tailAnim:CatStuff:tail_jnt_01
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Jnts/tailAnim:CatStuff:tail_jnt_01/tailAnim:CatStuff:tail_jnt_02
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Jnts/tailAnim:CatStuff:tail_jnt_01/tailAnim:CatStuff:tail_jnt_02/tailAnim:CatStuff:tail_jnt_03
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Jnts/tailAnim:CatStuff:tail_jnt_01/tailAnim:CatStuff:tail_jnt_02/tailAnim:CatStuff:tail_jnt_03/tailAnim:CatStuff:tail_jnt_04
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Jnts/tailAnim:CatStuff:tail_jnt_01/tailAnim:CatStuff:tail_jnt_02/tailAnim:CatStuff:tail_jnt_03/tailAnim:CatStuff:tail_jnt_04/tailAnim:CatStuff:tail_jnt_05
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Jnts/tailAnim:CatStuff:tail_jnt_01/tailAnim:CatStuff:tail_jnt_02/tailAnim:CatStuff:tail_jnt_03/tailAnim:CatStuff:tail_jnt_04/tailAnim:CatStuff:tail_jnt_05/tailAnim:CatStuff:tail_jnt_06
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Jnts/tailAnim:CatStuff:tail_jnt_01/tailAnim:CatStuff:tail_jnt_02/tailAnim:CatStuff:tail_jnt_03/tailAnim:CatStuff:tail_jnt_04/tailAnim:CatStuff:tail_jnt_05/tailAnim:CatStuff:tail_jnt_06/tailAnim:CatStuff:tail_jnt_07
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Jnts/tailAnim:CatStuff:tail_jnt_01/tailAnim:CatStuff:tail_jnt_02/tailAnim:CatStuff:tail_jnt_03/tailAnim:CatStuff:tail_jnt_04/tailAnim:CatStuff:tail_jnt_05/tailAnim:CatStuff:tail_jnt_06/tailAnim:CatStuff:tail_jnt_07/tailAnim:CatStuff:tail_jnt_08
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/tailAnim:CatStuff:TailRig/tailAnim:CatStuff:Jnts/tailAnim:CatStuff:tail_jnt_01/tailAnim:CatStuff:tail_jnt_02/tailAnim:CatStuff:tail_jnt_03/tailAnim:CatStuff:tail_jnt_04/tailAnim:CatStuff:tail_jnt_05/tailAnim:CatStuff:tail_jnt_06/tailAnim:CatStuff:tail_jnt_07/tailAnim:CatStuff:tail_jnt_08/tailAnim:CatStuff:tail_jnt_end
+        weight: 1
+      - path: RIG/leg_left_joint
+        weight: 1
+      - path: RIG/leg_right_joint
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:mstr_ctrl
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Ctrls
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Ctrls/CatStuff:jnt_01_ctrl
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Ctrls/CatStuff:jnt_01_ctrl/CatStuff:jnt_02_ctrl
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Ctrls/CatStuff:jnt_01_ctrl/CatStuff:jnt_02_ctrl/CatStuff:jnt_03_ctrl
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Ctrls/CatStuff:jnt_01_ctrl/CatStuff:jnt_02_ctrl/CatStuff:jnt_03_ctrl/CatStuff:jnt_04_ctrl
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Ctrls/CatStuff:jnt_01_ctrl/CatStuff:jnt_02_ctrl/CatStuff:jnt_03_ctrl/CatStuff:jnt_04_ctrl/CatStuff:jnt_05_ctrl
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Ctrls/CatStuff:jnt_01_ctrl/CatStuff:jnt_02_ctrl/CatStuff:jnt_03_ctrl/CatStuff:jnt_04_ctrl/CatStuff:jnt_05_ctrl/CatStuff:jnt_06_ctrl
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Ctrls/CatStuff:jnt_01_ctrl/CatStuff:jnt_02_ctrl/CatStuff:jnt_03_ctrl/CatStuff:jnt_04_ctrl/CatStuff:jnt_05_ctrl/CatStuff:jnt_06_ctrl/CatStuff:jnt_07_ctrl
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Ctrls/CatStuff:jnt_01_ctrl/CatStuff:jnt_02_ctrl/CatStuff:jnt_03_ctrl/CatStuff:jnt_04_ctrl/CatStuff:jnt_05_ctrl/CatStuff:jnt_06_ctrl/CatStuff:jnt_07_ctrl/CatStuff:jnt_08_ctrl
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Geo
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Jnts
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Jnts/CatStuff:tail_jnt_01
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Jnts/CatStuff:tail_jnt_01/CatStuff:tail_jnt_02
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Jnts/CatStuff:tail_jnt_01/CatStuff:tail_jnt_02/CatStuff:tail_jnt_03
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Jnts/CatStuff:tail_jnt_01/CatStuff:tail_jnt_02/CatStuff:tail_jnt_03/CatStuff:tail_jnt_04
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Jnts/CatStuff:tail_jnt_01/CatStuff:tail_jnt_02/CatStuff:tail_jnt_03/CatStuff:tail_jnt_04/CatStuff:tail_jnt_05
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Jnts/CatStuff:tail_jnt_01/CatStuff:tail_jnt_02/CatStuff:tail_jnt_03/CatStuff:tail_jnt_04/CatStuff:tail_jnt_05/CatStuff:tail_jnt_06
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Jnts/CatStuff:tail_jnt_01/CatStuff:tail_jnt_02/CatStuff:tail_jnt_03/CatStuff:tail_jnt_04/CatStuff:tail_jnt_05/CatStuff:tail_jnt_06/CatStuff:tail_jnt_07
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Jnts/CatStuff:tail_jnt_01/CatStuff:tail_jnt_02/CatStuff:tail_jnt_03/CatStuff:tail_jnt_04/CatStuff:tail_jnt_05/CatStuff:tail_jnt_06/CatStuff:tail_jnt_07/CatStuff:tail_jnt_08
+        weight: 1
+      - path: RIG/leg_right_joint/CatStuff:TailRig/CatStuff:Jnts/CatStuff:tail_jnt_01/CatStuff:tail_jnt_02/CatStuff:tail_jnt_03/CatStuff:tail_jnt_04/CatStuff:tail_jnt_05/CatStuff:tail_jnt_06/CatStuff:tail_jnt_07/CatStuff:tail_jnt_08/CatStuff:tail_jnt_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
