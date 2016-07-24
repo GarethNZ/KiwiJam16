@@ -15,9 +15,7 @@ public class FeetController : MonoBehaviour {
     public GameObject leftFoot;
     public GameObject rightFoot;
 
-    private GameObject GameBounds;
-
-    private const float MAX_SPEED = 5.0f;
+    private const float MAX_SPEED = 10.0f;
     //private Vector3 MOVE_FORWARD = new Vector3(0, 0, MAX_SPEED);
 
     private const float MAX_STRIDE = 10.0f;
@@ -35,20 +33,12 @@ public class FeetController : MonoBehaviour {
 
         leftInputs = InputRandomizer.inputMaps[setOfInputsLeft];
         rightInputs = InputRandomizer.inputMaps[setOfInputsRight];
-
-        GameBounds = GameObject.Find("GameBounds");
-        //GameBounds.transform
     }
 
     // Update is called once per frame
     void Update() {
         bool rightMoved = updateFoot(rightFoot, rightInputs.horizontal, rightInputs.vertical, rightNoiseOffset);
         bool leftMoved = updateFoot(leftFoot, leftInputs.horizontal, leftInputs.vertical, leftNoiseOffset);
-
-        Vector3 upperBodyTarget = upperBody.transform.position;
-        upperBodyTarget.z = (rightFoot.transform.position.z + leftFoot.transform.position.z) / 2;
-        upperBodyTarget.x = (rightFoot.transform.position.x + leftFoot.transform.position.x) / 2;
-        upperBody.transform.position = Vector3.MoveTowards(upperBody.transform.position, upperBodyTarget, MAX_SPEED * Time.deltaTime);
 
         float distanceBetweenFeet = Vector3.Distance(leftFoot.transform.position, rightFoot.transform.position);
         if (distanceBetweenFeet >= MAX_STRIDE)
@@ -80,6 +70,14 @@ public class FeetController : MonoBehaviour {
                 onOverStride();
             }
         }
+
+        Vector3 upperBodyTarget = Vector3.Lerp(rightFoot.transform.position, leftFoot.transform.position, 0.5f);
+        upperBodyTarget.y = upperBody.transform.position.y;
+        //Vector3.Lerp
+        //upperBodyTarget.z = (rightFoot.transform.position.z + leftFoot.transform.position.z) / 2;
+        //upperBodyTarget.x = (rightFoot.transform.position.x + leftFoot.transform.position.x) / 2;
+        upperBody.transform.position = Vector3.MoveTowards(upperBody.transform.position, upperBodyTarget, MAX_SPEED * Time.deltaTime);
+
     }
 
     private float NOISE_AMPLITUDE = 0.5f;
@@ -97,7 +95,7 @@ public class FeetController : MonoBehaviour {
         foot.transform.Translate(movement * MAX_SPEED * Time.deltaTime);
 
         float xPos = Mathf.Clamp(foot.transform.position.x, -10f, 13f);
-        float zPos = Mathf.Clamp(foot.transform.position.z, -76f, 65f);
+        float zPos = Mathf.Clamp(foot.transform.position.z, -76f, 110f);
         foot.transform.position = new Vector3(xPos, foot.transform.position.y, zPos);
 
         return Input.GetAxis(leftRightAxis) != 0f || Input.GetAxis(forwardBackAxis) != 0f;

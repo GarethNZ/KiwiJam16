@@ -4,15 +4,17 @@ using System.Collections.Generic;
 class DetectionMeter : MonoBehaviour
 {
     private float totalDetection = 0f;
+
+    private GameStateController gameController;
     // Use this for initialization
     void Start()
     {
-
+        gameController = GameObject.FindObjectOfType<GameStateController>();
     }
 
 
     private float STANDARD_DETECTION_RATE = 1.0f;
-    private float OBSTACLE_DETECTION_RATE = 3.0f;
+    private float OBSTACLE_DETECTION_RATE = 5.0f;
 
     private bool isObstacle = false;
      
@@ -20,16 +22,17 @@ class DetectionMeter : MonoBehaviour
     void Update()
     {
         totalDetection += (isObstacle ? OBSTACLE_DETECTION_RATE : STANDARD_DETECTION_RATE) * Time.deltaTime;
-        if (totalDetection > 100)
+        if (totalDetection >= 100)
         {
-            // TODO: Game fail
+            gameController.gameFail();
+            totalDetection = 100;
         }
         Vector3 newScale = transform.localScale;
         newScale.x = totalDetection;
         transform.localScale = newScale;
     }
 
-    // TODO: Use a sets
+    // TODO: Use a set
     private List<GameObject> objectsIntersectingWithObstacles = new List<GameObject>();
 
     public void intersectingWithObstacle(GameObject limb)
