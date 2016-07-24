@@ -1,0 +1,305 @@
+fileFormatVersion: 2
+guid: 7b206ffeabc674d41a566c3fb0ed515d
+timeCreated: 1469318132
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arm_left_joint
+    100002: arm_right_joint
+    100004: buttom01_GEO
+    100006: buttom02_GEO
+    100008: buttom03_GEO
+    100010: CatHead_bottom_GEO
+    100012: CatHead_middle_GEO
+    100014: CatHead_TOP_GEO
+    100016: Coat_GEO
+    100018: collar_GEO
+    100020: hand_left_joint
+    100022: hand_right_joint
+    100024: Hat_GEO
+    100026: head_joint
+    100028: hip_joint
+    100030: leg_left_joint
+    100032: leg_right_joint
+    100034: MESH2
+    100036: Paw_left_GEO001
+    100038: Paw_left_GEO002
+    100040: pCube021
+    100042: pCube9
+    100044: RIG
+    100046: //RootNode
+    100048: shoulders_joint
+    100050: waist_joint
+    100052: wriskle01
+    100054: wriskle011
+    100056: wriskle012
+    100058: wriskle02
+    100060: wriskle03
+    100062: wriskle04
+    100064: wriskle05
+    100066: wriskle06
+    100068: wriskle07'
+    100070: wriskle08
+    100072: wriskle09
+    100074: wriskle10
+    400000: arm_left_joint
+    400002: arm_right_joint
+    400004: buttom01_GEO
+    400006: buttom02_GEO
+    400008: buttom03_GEO
+    400010: CatHead_bottom_GEO
+    400012: CatHead_middle_GEO
+    400014: CatHead_TOP_GEO
+    400016: Coat_GEO
+    400018: collar_GEO
+    400020: hand_left_joint
+    400022: hand_right_joint
+    400024: Hat_GEO
+    400026: head_joint
+    400028: hip_joint
+    400030: leg_left_joint
+    400032: leg_right_joint
+    400034: MESH2
+    400036: Paw_left_GEO001
+    400038: Paw_left_GEO002
+    400040: pCube021
+    400042: pCube9
+    400044: RIG
+    400046: //RootNode
+    400048: shoulders_joint
+    400050: waist_joint
+    400052: wriskle01
+    400054: wriskle011
+    400056: wriskle012
+    400058: wriskle02
+    400060: wriskle03
+    400062: wriskle04
+    400064: wriskle05
+    400066: wriskle06
+    400068: wriskle07'
+    400070: wriskle08
+    400072: wriskle09
+    400074: wriskle10
+    2300000: pCube021
+    2300002: pCube9
+    3300000: pCube021
+    3300002: pCube9
+    4300000: pCube9
+    4300002: pCube021
+    4300004: Coat_GEO
+    4300006: wriskle03
+    4300008: wriskle04
+    4300010: wriskle02
+    4300012: wriskle01
+    4300014: wriskle07'
+    4300016: wriskle08
+    4300018: wriskle06
+    4300020: wriskle05
+    4300022: collar_GEO
+    4300024: wriskle011
+    4300026: wriskle012
+    4300028: wriskle10
+    4300030: wriskle09
+    4300032: buttom03_GEO
+    4300034: buttom02_GEO
+    4300036: buttom01_GEO
+    4300038: CatHead_bottom_GEO
+    4300040: CatHead_middle_GEO
+    4300042: CatHead_TOP_GEO
+    4300044: Hat_GEO
+    4300046: Paw_left_GEO001
+    4300048: Paw_left_GEO002
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: buttom01_GEO
+    13700002: buttom02_GEO
+    13700004: buttom03_GEO
+    13700006: CatHead_bottom_GEO
+    13700008: CatHead_middle_GEO
+    13700010: CatHead_TOP_GEO
+    13700012: Coat_GEO
+    13700014: collar_GEO
+    13700016: Hat_GEO
+    13700018: Paw_left_GEO001
+    13700020: Paw_left_GEO002
+    13700022: wriskle01
+    13700024: wriskle011
+    13700026: wriskle012
+    13700028: wriskle02
+    13700030: wriskle03
+    13700032: wriskle04
+    13700034: wriskle05
+    13700036: wriskle06
+    13700038: wriskle07'
+    13700040: wriskle08
+    13700042: wriskle09
+    13700044: wriskle10
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MESH2
+        weight: 1
+      - path: MESH2/buttom01_GEO
+        weight: 1
+      - path: MESH2/buttom02_GEO
+        weight: 1
+      - path: MESH2/buttom03_GEO
+        weight: 1
+      - path: MESH2/CatHead_bottom_GEO
+        weight: 1
+      - path: MESH2/CatHead_middle_GEO
+        weight: 1
+      - path: MESH2/CatHead_TOP_GEO
+        weight: 1
+      - path: MESH2/Coat_GEO
+        weight: 1
+      - path: MESH2/collar_GEO
+        weight: 1
+      - path: MESH2/Hat_GEO
+        weight: 1
+      - path: MESH2/Paw_left_GEO001
+        weight: 1
+      - path: MESH2/Paw_left_GEO002
+        weight: 1
+      - path: MESH2/wriskle01
+        weight: 1
+      - path: MESH2/wriskle02
+        weight: 1
+      - path: MESH2/wriskle03
+        weight: 1
+      - path: MESH2/wriskle04
+        weight: 1
+      - path: MESH2/wriskle05
+        weight: 1
+      - path: MESH2/wriskle06
+        weight: 1
+      - path: MESH2/wriskle07'
+        weight: 1
+      - path: MESH2/wriskle08
+        weight: 1
+      - path: MESH2/wriskle09
+        weight: 1
+      - path: MESH2/wriskle10
+        weight: 1
+      - path: MESH2/wriskle011
+        weight: 1
+      - path: MESH2/wriskle012
+        weight: 1
+      - path: RIG
+        weight: 1
+      - path: RIG/hip_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/hand_left_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_left_joint/pCube021
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_right_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/arm_right_joint/hand_right_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/head_joint
+        weight: 1
+      - path: RIG/hip_joint/waist_joint/shoulders_joint/head_joint/pCube9
+        weight: 1
+      - path: RIG/leg_left_joint
+        weight: 1
+      - path: RIG/leg_right_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
