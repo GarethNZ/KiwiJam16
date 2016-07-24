@@ -2,6 +2,11 @@
 using System.Collections;
 
 public class FeetController : MonoBehaviour {
+    public InputRandomizer.DualInputSet setOfInputsLeft;
+    private InputRandomizer.DualAxisInput leftInputs;
+
+    public InputRandomizer.DualInputSet setOfInputsRight;
+    private InputRandomizer.DualAxisInput rightInputs;
 
     public delegate void SteppedTooFar();
     public static event SteppedTooFar onOverStride;
@@ -25,12 +30,15 @@ public class FeetController : MonoBehaviour {
     void Start() {
         leftNoiseOffset = Random.Range(0, 100f);
         rightNoiseOffset = Random.Range(0, 100f);
+
+        leftInputs = InputRandomizer.inputMaps[setOfInputsLeft];
+        rightInputs = InputRandomizer.inputMaps[setOfInputsRight];
     }
 
     // Update is called once per frame
     void Update() {
-        updateFoot(rightFoot, "2Horizontal", "2Vertical", rightNoiseOffset);
-        updateFoot(leftFoot, "2Horizontal_b", "2Vertical_b", leftNoiseOffset);
+        updateFoot(rightFoot, rightInputs.horizontal, rightInputs.vertical, rightNoiseOffset);
+        updateFoot(leftFoot, leftInputs.horizontal, leftInputs.vertical, leftNoiseOffset);
 
         Vector3 upperBodyTarget = upperBody.transform.position;
         upperBodyTarget.z = (rightFoot.transform.position.z + leftFoot.transform.position.z) / 2;
@@ -58,7 +66,7 @@ public class FeetController : MonoBehaviour {
     private void updateFoot(GameObject foot, string leftRightAxis, string forwardBackAxis, float noiseOffset)
     {
         Vector3 movement = Vector3.zero;
-        movement.x = Input.GetAxis(leftRightAxis) + getNoise(noiseOffset);
+        movement.x = -Input.GetAxis(leftRightAxis) + getNoise(noiseOffset);
         movement.z = Input.GetAxis(forwardBackAxis) + getNoise(noiseOffset);
         foot.transform.Translate(movement * MAX_SPEED * Time.deltaTime);
     }

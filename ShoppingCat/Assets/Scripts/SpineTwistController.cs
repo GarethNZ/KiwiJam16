@@ -2,8 +2,8 @@
 
 public class SpineTwistController : MonoBehaviour {
 
-    public string leftRightInputAxis = "Horizontal";
-    public string forwardBackInputAxis = "Vertical";
+    public InputRandomizer.DualInputSet setOfInputs;
+    private InputRandomizer.DualAxisInput inputs;
 
     public bool isArm = false;
 
@@ -17,6 +17,7 @@ public class SpineTwistController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        inputs = InputRandomizer.inputMaps[setOfInputs];
         xNoiseOffset = Random.Range(0, 100f);
         yNoiseOffset = Random.Range(0, 100f);
         zNoiseOffset = Random.Range(0, 100f);
@@ -37,13 +38,14 @@ public class SpineTwistController : MonoBehaviour {
     void Update () {
         // TODO: surely there is an easier way of doing all of this
         Vector3 newRotation = Vector3.zero;
-        newRotation.z = MAX_ROTATION * Input.GetAxis(leftRightInputAxis);
+        
+        newRotation.z = MAX_ROTATION * Input.GetAxis(inputs.horizontal);
         if (isArm)
         {
-            newRotation.y = MAX_ROTATION * Input.GetAxis(forwardBackInputAxis);
+            newRotation.y = MAX_ROTATION * Input.GetAxis(inputs.vertical);
         } else
         {
-            newRotation.x = MAX_ROTATION * Input.GetAxis(forwardBackInputAxis);
+            newRotation.x = MAX_ROTATION * Input.GetAxis(inputs.vertical);
         }
 
         //Debug.Log("start = " + transform.localRotation.eulerAngles + " newRotation = " + newRotation);
